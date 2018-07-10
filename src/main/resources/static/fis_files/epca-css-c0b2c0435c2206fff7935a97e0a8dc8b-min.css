@@ -1,0 +1,11 @@
+.hotel-coupon-main{width:100%;margin-bottom:1em}
+.hotel-coupon-primary{border:1px dashed #536d83;border-radius:3px;color:#4e4e4e;background-color:#edf7ff;padding:.88235294em 0 1.05882353em .47058824em}
+.icon-tag{color:#4e4e4e;margin-right:.70588235em}
+.hotel-coupon-primary .hotel-coupon-text-container{display:inline-block;width:88%;vertical-align:middle;padding-top:.29411765em;color:#536d83}
+.hotel-coupon-primary .hotel-coupon-tag-container{display:inline-block;vertical-align:top;color:#536d83;padding:.23529412em .29411765em}
+.hotel-coupon-primary p{display:inline-block}
+@media only screen and (max-width:59.9375em){.hotel-coupon-primary{border:1px dashed #536d83;border-radius:3px;color:#4e4e4e;background-color:#edf7ff;padding:.88235294em 0 1.05882353em .47058824em;float:right;width:100%}
+}
+.hotel-coupon-header{color:#1f1f1f}
+.hotel-coupons-highlight-word{color:#757575}
+.hotel-coupons-TnC{color:#0065b8}

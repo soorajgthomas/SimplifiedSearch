@@ -1,0 +1,604 @@
+.page-header,.main{max-width:69.17647058823529em;margin:0 auto}
+.main{padding:0 .70588235em .70588235em}
+.main .alert{display:block}
+template{display:none}
+.tripSummaryContainer{-webkit-box-ordinal-group:0;-moz-box-ordinal-group:0;-ms-flex-order:0;-webkit-order:0;order:0}
+.bookingContainer{-webkit-box-ordinal-group:5;-moz-box-ordinal-group:5;-ms-flex-order:5;-webkit-order:5;order:5}
+.bookingContainer form{display:inline}
+.bookingContainer .btn-primary{width:100%}
+.flightSummaryContainer{-webkit-box-ordinal-group:1;-moz-box-ordinal-group:1;-ms-flex-order:1;-webkit-order:1;order:1}
+.fareFamilyContainer{-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;-ms-flex-order:2;-webkit-order:2;order:2}
+.importantInfoContainer{-webkit-box-ordinal-group:3;-moz-box-ordinal-group:3;-ms-flex-order:3;-webkit-order:3;order:3}
+.hotelCrossSellContainer,.carCrossSellContainer,.hotMipContainer{-webkit-box-ordinal-group:4;-moz-box-ordinal-group:4;-ms-flex-order:4;-webkit-order:4;order:4}
+.creditCardPromoContainer{-webkit-box-ordinal-group:6;-moz-box-ordinal-group:6;-ms-flex-order:6;-webkit-order:6;order:6;display:none}
+.hotelCrossSellContainer,.carCrossSellContainer,.fareFamilyContainer.bookingContainer ~ .bookingContainer{display:none}
+@media only screen and (min-width:30.75em){.bookingContainer .btn-primary{width:auto}
+.creditCardPromoContainer{display:block}
+.hotelCrossSellContainer,.carCrossSellContainer,.fareFamilyContainer+.carCrossSellContainer ~ .bookingContainer{display:block}
+}
+@media only screen and (min-width:45.375em){.bookingContainer form{display:inline-block;float:left}
+.bookingContainer .btn-primary{width:auto}
+}
+@media only screen and (min-width:60em){.flexbox .main.uitk-grid{display:block}
+.uitk-col.flightSummaryContainer,.uitk-col.bookingContainer,.uitk-col.hotMipContainer,.uitk-col.fareFamilyContainer,.uitk-col.hotelCrossSellContainer,.uitk-col.carCrossSellContainer{width:66.67%;float:left;clear:left}
+.uitk-col.tripSummaryContainer,.uitk-col.importantInfoContainer,.uitk-col.creditCardPromoContainer{width:33.33%;margin-left:66.67%;padding-left:.70588235em}
+.uitk-col.tripSummaryContainer{float:right;margin-left:0}
+}
+.flightSummary{color:#1f1f1f;background:#fff;border:0 solid #c7c7c7;border-width:0 0 1px;-webkit-border-radius:0 0 .17647059em .17647059em;-moz-border-radius:0 0 .17647059em .17647059em;-o-border-radius:0 0 .17647059em .17647059em;border-radius:0 0 .17647059em .17647059em;margin:0}
+.flightSummary .flex-card{margin-bottom:0}
+.flightSummary .flex-content{padding:0 .70588235em}
+.flightSummary .details .flex-area-primary{padding-bottom:0;border-bottom:1px #c7c7c7 solid}
+.flightSummary .departureDate{float:left;margin-bottom:0;margin-top:.58823529em;width:170px;font-weight:700}
+.flightSummary .image.airlineLogo{width:2em;height:2em;display:inline-block;vertical-align:middle;padding:0;margin:0;background-color:#fff}
+.flightSummary .image.airlineLogo .media-loader{display:none}
+.flightSummary .image.nonAirServiceLogo{width:1.17647059em;height:1.29411765em;display:inline-block;vertical-align:middle;padding:0;margin:0;background-color:#fff}
+.flightSummary .image.nonAirServiceLogo .media-loader{display:none}
+.odPair{float:left;padding:.47058824em .94117647em 0 0;margin:0}
+.odPair li{font-weight:700;padding-bottom:0}
+.odPair li .type-300:first-child{color:#616161;display:inline-block;margin-right:.58823529em;min-width:4.23529412em}
+.flightMessage{float:right}
+.superlative{color:#2f7000;font-size:.7058823529411765em;font-weight:700;padding-left:.29411765em;position:relative}
+.airlineName{display:inline-block;font-weight:normal;margin:0 0 0 .70588235em}
+.changeFlights{margin:.70588235em;font-weight:bold}
+.bargainFareHeader{margin:.35294118em 0 0;font-weight:700}
+.basicEconomy{color:#616161}
+.basicEconomy{font-size:.76470588em}
+.basicEconomy{line-height:1.5384615384615385}
+.basicEconomy .header{font-weight:500;margin-top:.88235294em;margin-bottom:.88235294em}
+.basicEconomy li{padding:0}
+@media only screen and (max-width:1060px){.superlative{position:static;top:auto}
+}
+@media only screen and (max-width:59.9375em){.flightSummary .flex-content{padding:0}
+.flightSummary .date{width:132px}
+}
+@media only screen and (max-width:30.6875em){.flightMessage{padding-top:.11764706em}
+}
+.flightSummary-expandedDetails{margin-top:.70588235em}
+.flightSummary-expandedDetails .toggle-trigger{font-size:.76470588em}
+.flightSummary-expandedDetails .toggle-trigger{line-height:1.4}
+.flightSummary-expandedDetails .toggle-pane{border-top:1px #c7c7c7 solid}
+.flightSummary-expandedDetails .colHeader{clear:both;color:#616161;float:left;font-weight:400;margin:0;padding:0;text-align:right;width:190px}
+.flightSummary-expandedDetails .colHeader{font-size:.76470588em}
+.flightSummary-expandedDetails .colHeader{line-height:1.4}
+.flightSummary-expandedDetails .colDetails{width:auto;margin-left:242px;color:#616161}
+.flightSummary-expandedDetails .mixedCabinClass{color:#d60000}
+.flightSummary-expandedDetails .odPair{color:#757575;float:none;font-weight:500}
+.flightSummary-expandedDetails .odPair li:first-child{padding-bottom:0}
+.flightSummary-expandedDetails .planeInfo span ~ span::before{content:'\00a0|\00a0'}
+.flightSummary-expandedDetails .durationStops{padding-right:.70588235em}
+.flightSpecifics{margin:.70588235em 0 .70588235em}
+.flightDetailsToggle{padding-bottom:1em}
+.layover{margin-top:.35294118em}
+.layover .colHeader{font-size:initial}
+.layover strong{color:#1f1f1f}
+.layoverLocation{display:block}
+.colDetails .bagFeeInfoHeader{font-weight:normal;color:inherit;margin-top:0;margin-bottom:.70588235em}
+.bagFeeInfo th,.bagFeeInfo td{font-weight:normal;text-align:left}
+@media only screen and (max-width:59.9375em){.flightSummary-expandedDetails .colHeader{width:152px}
+.flightSummary-expandedDetails .colDetails{margin-left:204px}
+.layover .colDetails{max-width:none}
+}
+@media only screen and (max-width:30.6875em){.flightSummary-expandedDetails .colHeader{float:none;clear:both;font-weight:700;text-align:left;width:auto}
+.flightSummary-expandedDetails .colDetails{margin-left:0}
+.layover .colHeader,.layover .colDetails{display:inline-block;vertical-align:top}
+.layover .colHeader{margin-right:.35294118em}
+}
+.flightSummary-timeDuration{clear:both}
+.departure,.arrowIcon,.arrival,.durationStops,.overnightMessage{float:left;padding:.58823529em 0 .70588235em 0}
+.departure{width:10em}
+.arrival{width:8.5em}
+.arrowIcon{width:4.23529412em;height:3.05882353em}
+.icon-oneway{color:#c7c7c7}
+.icon-oneway{font-size:1.17647059em}
+.icon-oneway{line-height:1.35}
+.ebfAirportCode,.time{color:#1f1f1f;white-space:nowrap;display:inline-block}
+.flightSummary-expandedDetails .ebfAirportCode,.flightSummary-expandedDetails .time{margin-right:.70588235em}
+.airportCode,.ebfMessage{color:#616161}
+.durationStops{padding-left:.70588235em}
+.durationStops>span{color:#1f1f1f;white-space:nowrap;display:inline-block}
+.durationStops .airportStops{color:#616161}
+.durationStops .airportStops span::after{content:', '}
+.durationStops .airportStops span:last-child::after{content:none}
+.arrivalNotice{color:#d60000}
+.overnightMessage{color:#616161}
+.overnightMessage .icon-overnight{line-height:30px}
+.differentDepartAirport,.differentAirport{color:#d60000}
+@media only screen and (max-width:59.9375em){.durationStops{padding-left:1em}
+.departure{width:7.76470588em}
+}
+@media only screen and (max-width:45.3125em){.arrival{padding-left:0;width:auto}
+}
+@media only screen and (max-width:30.6875em){.arrival,.departure{width:40%}
+.arrowIcon{width:14%;height:auto;text-align:center}
+.durationStops{clear:both;padding-left:0}
+.flightSummary-expandedDetails .durationStops{clear:none}
+.overnightMessage{clear:both;float:none;padding:0}
+}
+.tripSummary{overflow:hidden}
+.tripSummary h2{margin-bottom:0}
+.tripSummary li{padding-bottom:0}
+.tripSummary .toggle-trigger{margin-top:0;display:block}
+.tripSummary .productPriceSummary .toggle-trigger{width:100%}
+.tripSummary .tripTotals{text-align:right}
+.tripSummary .trip-total{font-size:.76470588em}
+.tripSummary .trip-total{line-height:1.4}
+.tripSummary .urgencyMessage{color:#d60000;margin-bottom:1.05882353em;float:right}
+.tripSummary .urgencyMessage{font-size:.76470588em}
+.tripSummary .urgencyMessage{line-height:1.4}
+.tripSummary .insurance-priming-message-add-ins{padding:.35294118em 0 .35294118em .35294118em;font-weight:bold;color:#2f7000}
+.tripSummary .display-right-align{display:inline;padding-left:.17647059em}
+.tripSummary .insurancePrimingMessage{padding-left:.17647059em}
+.tripSummary .note{color:#616161;clear:both}
+.tripSummary .note{font-size:.76470588em}
+.tripSummary .note{line-height:1.4}
+.tripSummaryCallout{clear:both}
+.tripSummaryCallout .alert{background-color:#cbdef2;border-left:0;color:#616161}
+.tripSummaryCallout .alert a{color:#00355f;text-decoration:none;font-weight:bold}
+.tripSummaryCallout .payback{padding-left:1.05882353em}
+.tripSummaryCallout .payback .image{display:inline-block;width:75px;height:25px;padding-bottom:0;margin-bottom:0;background:transparent}
+.tripSummaryCallout .paybackMsg{display:inline-block;margin-left:.70588235em}
+.tripSummaryCallout .paybackMsg .header{color:#00355f;font-size:inherit;margin:0;font-weight:700}
+.tripSummaryCallout .telesales ul{margin-left:.94117647em;margin-top:0}
+.tripSummaryCallout .telesales ul li:last-child{padding-bottom:0}
+.differentDayArrival{color:#7a5305;font-weight:bold;margin-top:.70588235em}
+.differentDayArrival{font-size:.76470588em}
+.differentDayArrival{line-height:1.4}
+.priceGuarantee{color:#0065b8;font-weight:700;margin-bottom:.29411765em;text-align:right}
+.priceGuarantee{font-size:.76470588em}
+.priceGuarantee{line-height:1.4}
+.tripSummaryList{font-size:.76470588em}
+.tripSummaryList{line-height:1.4}
+.tripSummaryList .tripSummaryContent{margin:0 .47058824em 0 .47058824em;clear:both;color:#404040}
+.tripSummaryList .tripSummaryContent li{padding:0 .70588235em 0 .70588235em;clear:both}
+.tripSummaryList .toggle-pane{overflow:auto}
+.taxesAndFeesBreakdownContent{margin:0}
+.taxesAndFeesBreakdownContent li{padding:0}
+.taxesAndFeesBreakdownToolTip .hd{font-weight:700;color:#1f1f1f}
+.itemPriceSummary{color:#616161;margin-top:0}
+.itemPriceSummary{font-size:.76470588em}
+.itemPriceSummary{line-height:1.4}
+.fareFamilyUpgrades li{display:none;color:#2f7000}
+.packagePriceList{margin:.47058824em 0}
+.totalContainer,.discountContainer{border-top:1px solid #c7c7c7;margin-top:.70588235em}
+.discountContainer{padding-top:.70588235em}
+.discountContainer .discount{color:#2f7000}
+.packagePriceTotal{font-size:1.2941176470588236em;font-weight:700;color:#1f1f1f;display:inline-block}
+.packagePriceTotal sup{font-size:.5em;position:relative;vertical-align:top;top:1.1em}
+.typePTS{font-size:.6em}
+@media only screen and (min-width:60em){.tripSummary .toggle-trigger.tripSummaryContentToggle{position:absolute !important;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0)}
+.tripSummary>.toggle-pane{visibility:visible !important;opacity:1 !important;height:auto !important}
+.packagePriceTotal{margin-left:.35294118em}
+}
+@media only screen and (max-width:59.9375em){.tripSummary h2{display:none}
+.tripSummary .tripSummaryContentToggle{float:left}
+.tripSummary .tripSummaryContentToggle+.toggle-pane{position:absolute}
+.tripSummary .tripSummaryContentToggle.open{float:none}
+.tripSummary .tripSummaryContentToggle.open+.toggle-pane{position:static}
+.tripSummary .tripSummaryContentToggle ~ .totalContainer .trip-total{font-size:1em}
+.tripSummary .tripSummaryContentToggle ~ .totalContainer .trip-total{line-height:1.411764705882353}
+.tripSummary .tripSummaryContentToggle.open ~ .totalContainer .trip-total{font-size:.76470588em}
+.tripSummary .tripSummaryContentToggle.open ~ .totalContainer .trip-total{line-height:1.4}
+.tripSummary .note{display:none}
+.tripSummary .toggle-pane.open+.totalContainer .note{display:block;text-align:right}
+.tripSummary .urgencyMessage{display:none;margin-bottom:0}
+.tripSummary .toggle-pane.open+.totalContainer .urgencyMessage{display:block}
+.tripSummary .tripSummaryCallout{display:none}
+.tripSummary .toggle-pane.open ~ .tripSummaryCallout{display:block}
+.tripSummary .insurance-priming-message-add-ins{display:none}
+.differentDayArrival{margin-top:0}
+.productPriceSummary{margin-left:25%;margin-bottom:.70588235em;float:left;clear:left;width:45%}
+.tripSummaryList{min-width:37%}
+.totalContainer{float:right;border-width:0;margin-top:0}
+.packagePriceList{margin-top:0}
+.packagePriceTotal{margin-left:.29411765em}
+}
+@media only screen and (max-width:45.375em){.toggle-pane.open+.totalContainer{border-width:1px;display:block;float:right;margin:.35294118em 0 0 0;width:auto}
+.tripSummary .tripSummaryContentToggle.open ~ .totalContainer{clear:both}
+.tripSummary .tripSummaryCallout{display:none}
+.tripSummary .toggle-pane.open ~ .tripSummaryCallout{display:block}
+.productPriceSummary{margin-left:40%;width:60%}
+.productPriceSummary,.itemPriceSummary{margin-bottom:0}
+}
+@media only screen and (max-width:30.6875em){.toggle-pane.open+.totalContainer{width:100%;padding-top:.70588235em}
+.tripSummary .note{float:right;margin-bottom:.70588235em}
+.tripSummary .tripSummaryCallout{display:none}
+.tripSummary .toggle-pane.open ~ .tripSummaryCallout{display:block}
+.productPriceSummary{margin-left:0;width:100%}
+.itemPriceSummary{margin-bottom:.58823529em}
+.toggle-list.tripSummaryList{clear:left;width:100%}
+}
+.dynamicSocialProof{display:inherit;padding:.35294118em 0 .35294118em .35294118em;font-weight:bold;color:#2f7000}
+.dynamicSocialProof .display-right-align{display:inline;padding-left:.17647059em}
+.dynamicSocialProof .insurancePrimingMessage{padding-left:.17647059em}
+@media only screen and (min-width:59.9375em){.dynamicSocialProof{display:none}
+}
+.importantInfo h2{margin-bottom:.17647059em}
+.importantInfo .disclaimer{display:none}
+.importantInfo.splitTicket h3{font-size:1em}
+.importantInfo.splitTicket h3{line-height:1.411764705882353}
+.importantInfoNotice{margin-top:.70588235em}
+.gstMessage{margin-top:.70588235em}
+.combinationMessage{font-size:.88235294em}
+.combinationMessage{line-height:1.4}
+.combinationMessage .toggle{display:inline}
+.combinationMessage button{font-weight:bold}
+.infoDetails{color:#404040;margin-left:1.41176471em}
+.infoDetails hr{margin-top:.94117647em}
+.importantInfoRules ul{margin-left:.47058824em}
+.importantInfoRules ul.fullIndent{margin-left:1.41176471em}
+.importantInfoRules ul li{padding-bottom:.70588235em}
+.importantInfoRules ul li:first-child{margin-top:.70588235em}
+.importantInfoRules ul .noBullet{list-style:none}
+.importantInfoRules ul .noBullet ul,.importantInfoRules ul .noBullet li,.importantInfoRules ul .noBullet li:first-child{margin-top:0;margin-bottom:0;padding:0}
+.importantInfoRules .footnotes{margin-left:0}
+.importantInfoRules .footnotes li{padding-bottom:1.38461538em}
+@media only screen and (min-width:60em){.infoDetails{font-size:.76470588em}
+.infoDetails{line-height:1.4}
+.combinationMessage{font-size:1em}
+.combinationMessage{line-height:1.411764705882353}
+.js .importantInfo .importantInfoToggle.toggle-trigger{position:absolute !important;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0)}
+.js .importantInfo .toggle-pane{visibility:visible !important;opacity:1 !important;height:auto !important}
+}
+@media only screen and (max-width:59.9375em){.importantInfo{padding-top:.29411765em}
+.importantInfo h3{margin-bottom:.58823529em}
+.importantInfo h3{font-size:.76470588em}
+.importantInfo h3{line-height:1.4}
+.importantInfo h3 .icon{padding-right:.29411765em}
+.importantInfo .disclaimer{display:block}
+.importantInfo .disclaimer{font-size:.88235294em}
+.importantInfo .disclaimer{line-height:1.4}
+.importantInfo .importantInfoToggle.toggle-trigger{font-size:.88235294em}
+.importantInfo .importantInfoToggle.toggle-trigger{line-height:1.4}
+.importantInfoNotice{margin-top:0}
+.gstMessage{margin-top:0}
+.importantInfoNotice,.importantInfoRules{font-size:.88235294em}
+.importantInfoNotice,.importantInfoRules{line-height:1.4}
+}
+.progressAlert{position:fixed;top:0;left:0;right:0;bottom:0;display:none;z-index:199;background-color:#999;background-color:rgba(153,153,153,0.5)}
+.progressAlertContent{min-height:6.47058824em;margin:-2.94117647em 0 0 -8.82352941em;padding:.70588235em;width:17.64705882em;-webkit-border-radius:.29411765em;-moz-border-radius:.29411765em;-o-border-radius:.29411765em;border-radius:.29411765em;-moz-box-shadow:5px 5px 5px #c7c7c7;-webkit-box-shadow:5px 5px 5px #c7c7c7;box-shadow:5px 5px 5px #c7c7c7;background-color:#fff;position:fixed;z-index:9999;border:solid 2px #00355f;left:50%;top:50%;text-align:center}
+.progressAlertContent h3{margin:0 0 .47058824em}
+.progressAlertContent img{display:block;margin:0 auto}
+.alert .bookShort{display:inline}
+.alert .bookLong{display:none}
+@media only screen and (min-width:30.6875em){.alert .bookShort{display:none}
+.alert .bookLong{display:inline}
+}
+.freeCancellation{display:inline-block;margin-top:.70588235em;padding-top:.70588235em;padding-bottom:.70588235em;color:#2f7000}
+.freeCancellation .icon{float:left}
+.freeCancellation .icon{font-size:.88235294em}
+.freeCancellation .icon{line-height:1.4666666666666666}
+.freeCancellation .message{color:#2f7000;margin:0 0 0 1.41176471em;font-weight:700}
+@media only screen and (max-width:30.6875em){.freeCancellation{margin-top:0;padding-top:.70588235em;padding-bottom:.70588235em}
+}
+.hotMipBanner{display:table;width:100%;color:#2f7000;background:#d2e6c8;margin-top:.70588235em;padding:.70588235em}
+.hotMipBanner .icon{display:table-cell;width:48px}
+.hotMipBanner .icon{font-size:2.11764706em}
+.hotMipBanner .icon{line-height:1}
+.hotMipBanner .message{display:table-cell;vertical-align:middle;color:#2f7000;font-weight:700}
+.fareFamilyList{margin-top:.58823529em}
+.fareFamilyList .title-main{font-weight:500}
+.fareFamilyList .title-main{font-size:1.17647059em}
+.fareFamilyList .title-main{line-height:1.35}
+.fareFamilyList .title-sub.default.secondary{font-size:.76470588em}
+.fareFamilyList .title-sub.default.secondary{line-height:1.4}
+.fareFamilyList .segmentBackground{background-color:#fff;border-bottom:1px solid #c7c7c7;padding:1.41176471em 0 1.41176471em 0;min-height:14em}
+.fareFamilyList .segmented-list .segment:last-child{border:0}
+.fareFamilyList .recommended.segment.no-target{background-color:#edfae6}
+.fareFamilyList .recommended.segment.no-target .toggle-inner{background-color:#edfae6}
+.fareFamilyList .featuredServices{font-size:.8235294117647058em;color:#616161;vertical-align:top;float:left}
+.fareFamilyList .featuredServices .text{margin-left:.17647059em}
+.fareFamilyList .fixedLuggageWidth{width:15.29411765em;text-align:left}
+.fareFamilyList .toggle-details{font-size:.7647058823529411em;margin-top:.23529412em;float:left;clear:left}
+.fareFamilyList .toggle-pane{visibility:hidden;opacity:0}
+.fareFamilyList .toggle-pane.open{margin-bottom:2.94117647em}
+.fareFamilyList .toggle-inner{display:inline-block;width:100%;color:#616161;background-color:#fff}
+.fareFamilyList .toggle-inner .icon-close{color:#b80000}
+.fareFamilyList .toggle-inner .header{color:#1f1f1f;margin-top:.17647059em;font-weight:700}
+.fareFamilyList .toggle-inner .header{font-size:.88235294em}
+.fareFamilyList .toggle-inner .header{line-height:1.4}
+.fareFamilyList .toggle-inner ul{padding-left:0}
+.fareFamilyList .toggle-inner li{list-style:none;padding-bottom:.70588235em}
+.fareFamilyList .toggle-inner li{font-size:.76470588em}
+.fareFamilyList .toggle-inner li{line-height:1}
+.fareFamilyList .included{color:#2f7000}
+.fareFamilyList .icon-close{color:#b80000}
+.fareFamilyList .iconWrapper{display:block;margin:.70588235em .35294118em 0 0}
+.fareFamilyList .icon{display:inline-block;margin-right:.38461538em}
+.fareFamilyList .componentCategory{width:100%;padding-left:.17647059em}
+.fareHeader{display:inline-block;width:100%;float:left}
+.fareHeader .fareName{text-transform:capitalize;vertical-align:top;margin:0;font-weight:700}
+.fareHeader .fareName{font-size:.88235294em}
+.fareHeader .fareName{line-height:1.4}
+.fareHeader .cabin{vertical-align:top;font-size:.7647058823529411em;margin:0;color:#757575;font-weight:normal}
+.mixedCabinSegments{font-size:.7058823529411765em;clear:left;float:left;padding:1.17647059em 0 1.17647059em 0;margin-bottom:1.05882353em}
+.farePrice{position:absolute;bottom:1.47058824em;right:0;margin-right:.70588235em;text-align:right}
+.farePrice .price{margin-right:.35294118em;font-weight:700;vertical-align:top}
+.farePrice .price{font-size:1em}
+.farePrice .price{line-height:1.411764705882353}
+.farePrice sup{position:relative;vertical-align:top;top:.9em}
+.farePrice .btn-secondary{margin:0}
+@media only screen and (min-width:780px){.fareFamilyList .segmentBackground{min-height:0}
+.fareFamilyList .featuredServices{margin-left:.58823529em;display:inline-block}
+.fareFamilyList .featuredServices span{display:inline-block;margin:0 .52941176em 0 0}
+.fareFamilyList .featuredServices .icon{display:inline-block;margin-right:.17647059em}
+.fareFamilyList .fixedLuggageWidth{width:10.88235294em;text-align:right}
+.fareFamilyList .toggle-details{display:block}
+.fareFamilyList .toggle-pane.open{margin-bottom:0}
+.fareFamilyList .componentCategory{width:33.33333333%}
+.fareHeader{width:8.23529412em}
+.recommended .fareHeader{width:4.70588235em}
+.recommended .featuredServices{margin-left:0}
+.farePrice{position:static;float:right;margin-right:0}
+.mixedCabinSegments{margin:0;width:42.35294118em}
+}
+.fareFamilySplitTickets header{padding:2.11764706em 0 .70588235em}
+.fareFamilySplitTickets header h2{margin:0}
+.fareFamilySplitTickets header p{color:#616161}
+.fareFamilySplitTickets.uitk-grid .flex-title{color:#1f1f1f;font-weight:bold}
+.fareFamilySplitTickets.uitk-grid .flex-price{display:block;font-weight:bold}
+.fareFamilySplitTickets .flex-area-secondary{max-width:8.82352941em}
+.fareFamilySplitTickets .icon-oneway{margin-left:.35294118em}
+.fareFamilySplitTickets .duration{color:#1f1f1f}
+.fareFamilySplitTickets .features{margin:.35294118em 0}
+.fareFamilySplitTickets .features li{padding:0}
+.fareFamilySplitTickets .upgradedMessage{display:none;color:#2f7000}
+.fareFamilySplitTickets .not-available strong{color:#1f1f1f}
+@media only screen and (min-width:30.6875em) and (max-width:45.3125em){.fareFamilySplitTickets.uitk-grid .flex-card .flex-figure{width:33.33%}
+}
+.creditCardPromo{border:1px solid #00355f;-webkit-border-radius:.23529412em;-moz-border-radius:.23529412em;-o-border-radius:.23529412em;border-radius:.23529412em;margin:.94117647em 0;padding:.17647059em .94117647em;display:block;overflow:hidden}
+.creditCardPromo:hover{text-decoration:none}
+.creditCardPromo .header{color:#00355f;font-size:.9411764705882353em;font-weight:700;margin-top:.88235294em;margin-bottom:.88235294em}
+.creditCardPromo .image.aspect-ratio4-3{float:right;padding:0;margin:0;height:53px;width:84px;background:transparent}
+.creditCardPromoDetails{width:55%;font-size:.7058823529411765em}
+.creditCardPromoDescription{color:#404040}
+.creditCardPromoLearnMore{color:#00355f;padding:.35294118em 0 .70588235em 0}
+@media only screen and (max-width:59.9375em){.creditCardPromo{margin-top:2.35294118em;padding:.58823529em .94117647em 0;position:relative}
+.creditCardPromo h3{margin:0}
+.creditCardPromo h3{font-size:1.17647059em}
+.creditCardPromo h3{line-height:1.35}
+.creditCardPromo .image.aspect-ratio4-3{top:-1.05882353em}
+.creditCardPromoDetails{width:70%;padding-bottom:.58823529em}
+.creditCardPromoDescription,.creditCardPromoLearnMore{font-size:1.1764705882352942em;margin:0;padding:0}
+}
+.crossSellInterstitial .center{padding:7.08333333em 0;text-align:center;font-weight:bold}
+.crossSellContainer{margin-top:.88235294em}
+.crossSellContainer .title-main{font-weight:500}
+.crossSellContainer .title-sub{color:#1f1f1f}
+.crossSellContainer .makeAndModel{color:#616161}
+.crossSellContainer .flex-card{margin-bottom:0}
+.crossSellContainer .flex-card.flex-theme-light:not(.flex-placeholder){border-bottom:0}
+.crossSellContainer .flex-card .flex-figure.hotelImg{width:160px}
+.crossSellContainer .flex-card .flex-figure.carImg{width:70px}
+.crossSellContainer .flex-card .btn.addToTripButton{margin-bottom:0}
+.crossSellContainer .flex-area-primary,.crossSellContainer .flex-area-secondary{padding:0}
+.no-flexbox .crossSellContainer .flex-area-primary,.no-flexbox .crossSellContainer .flex-area-secondary{width:50%}
+.crossSellContainer .flex-area-primary{padding:0 1.41176471em 0 .70588235em}
+.crossSellContainer .segmented-list{margin-bottom:.35294118em}
+.crossSellContainer .segment-footer{display:flex;justify-content:space-between;align-items:center}
+.crossSellContainer .segment-footer .moreInfo{color:#1f1f1f;margin-left:1.05882353em}
+.crossSellContainer .segment-footer .moreInfo.carInfo{color:#616161;margin:0 1.05882353em 0 0}
+.crossSellContainer .segment-footer .viewMoreButton{text-align:center;white-space:nowrap}
+.crossSellContainer .segment-footer .viewMoreButton.hotel{margin:.70588235em}
+.no-flexbox .crossSellContainer .segment-footer{display:table;width:100%}
+.no-flexbox .crossSellContainer .segment-footer .moreInfo{float:left;width:66%;margin-top:1.17647059em}
+.no-flexbox .crossSellContainer .segment-footer .viewMoreButton{display:inline-block;float:right}
+.crossSellContainer .carTotal{color:#1f1f1f}
+.crossSellContainer .bookLater{color:#616161;margin-top:.70588235em}
+.crossSellContainer .starRating{color:#536d83}
+.fareFamilyContainer ~ .carCrossSellContainer .segment-footer .moreInfo.carInfo{margin-top:.70588235em}
+.tooltip-inner .popupItem{display:flex;justify-content:space-between;margin:0}
+.tooltip-inner .popupItem .price{text-align:right}
+.no-flexbox .tooltip-inner .popupItem{display:table;width:100%}
+.no-flexbox .tooltip-inner .popupItem li{display:inline-block;width:50%}
+.no-flexbox .tooltip-inner .popupItem .price{float:right}
+.tooltip-inner .popupItem .bold{color:#1f1f1f}
+.tooltip-inner hr{margin:.29411765em 0 .58823529em}
+.modal-body .processingRequest{color:#1f1f1f;font-weight:bold}
+.modal-body .processingRequest .loader{margin-right:1.17647059em;vertical-align:middle;display:inline-block}
+#postJoinModal{color:#1f1f1f}
+.joinPromoBanner{margin-bottom:.35294118em}
+.joinPromoBanner .box{padding:.70588235em}
+.joinPromoBanner figure{margin-bottom:1.05882353em;padding-left:1.41176471em}
+.joinPromoBanner figure img{height:1.76470588em;width:auto}
+.joinPromoBanner .joinLoyaltyBenefitsContainer{padding-left:1.41176471em}
+.joinPromoBanner .joinLoyaltyBenefit.joinLoyalty123{display:table;vertical-align:top}
+.joinPromoBanner .joinLoyaltyBenefit.joinLoyaltyButton{text-align:center}
+.joinPromoBanner .circleContainer{display:table-cell}
+.joinPromoBanner .circle{background-color:#1f1f1f;-webkit-border-radius:.70588235em;-moz-border-radius:.70588235em;-o-border-radius:.70588235em;border-radius:.70588235em;color:#fff;display:inline-block;font-weight:bold;height:1.41176471em;text-align:center;width:1.41176471em}
+.joinPromoBanner .joinLoyaltyBenefitText{display:table-cell;color:#404040;padding-left:.70588235em}
+.joinPromoBanner .promoValue{font-weight:bold}
+.joinPromoBanner .joinPromoTandC{color:#757575}
+.joinPromoBanner .joinLoyaltyButton .joinBtn{-webkit-border-radius:.29411765em;-moz-border-radius:.29411765em;-o-border-radius:.29411765em;border-radius:.29411765em;padding:.58823529em 1.11764706em .58823529em 1.11764706em;margin-right:0;margin-top:0}
+.joinPromoBanner .joinLoyaltyButton .joinPromoButton .joinBtn{padding:0;margin:.29411765em 0 .29411765em 0}
+@media only screen and (max-width:45.3125em){.joinPromoBanner figure{padding-left:0}
+.joinPromoBanner .joinLoyaltyBenefitsContainer{padding-left:0}
+.joinPromoBanner .joinLoyaltyBenefitsContainer .circleContainer,.joinPromoBanner .joinLoyaltyBenefitsContainer .joinLoyaltyBenefitText{display:block;text-align:center}
+.joinPromoBanner .joinLoyaltyBenefitsContainer .joinLoyaltyBenefitText{padding-left:0}
+.joinPromoBanner .joinLoyaltyButton .joinBtn{margin-top:1.05882353em;width:100%}
+}
+.joinModalWrapper .modal-inner{max-width:20.58823529em}
+.joinModalWrapper .modal-inner .modal-header{padding:1.23529412em .70588235em 0 .70588235em;width:90%}
+.joinModalWrapper .modal-inner .modal-header h2{color:#1f1f1f;font-weight:normal}
+.joinModalWrapper .modal-inner .modal-header h2{font-size:.88235294em}
+.joinModalWrapper .modal-inner .modal-header h2{line-height:1.4}
+.joinModalWrapper .modal-inner .modal-body{padding:.70588235em}
+.joinModalWrapper .modal-inner .modal-body .TandCLabel{padding-top:.70588235em}
+.joinModalWrapper .modal-inner .modal-body #createAccount .name,.joinModalWrapper .modal-inner .modal-body #signIn .name{display:inline-block;width:48.6%}
+.joinModalWrapper .modal-inner .modal-body #createAccount .name:first-of-type,.joinModalWrapper .modal-inner .modal-body #signIn .name:first-of-type{margin-right:.35294118em}
+.joinModalWrapper .modal-inner .modal-body #createAccount fieldset,.joinModalWrapper .modal-inner .modal-body #signIn fieldset{margin-bottom:0}
+.joinModalWrapper .modal-inner .modal-body #createAccount .notGuest .btn-label,.joinModalWrapper .modal-inner .modal-body #signIn .notGuest .btn-label{padding-left:.29411765em}
+.joinModalWrapper .modal-inner .modal-body .joinOptions button.btnSecondary{vertical-align:baseline}
+.joinModalWrapper .modal-inner .modal-close .icon::after{color:#1f1f1f}
+.rewardsHeader.rewardsInHeader .amountDisplay{border:0;box-sizing:border-box;color:white;display:inline-block;float:left;font-weight:bold;position:relative;vertical-align:middle;margin:0 .11764706em 0 .11764706em;padding:0;top:.52941176em}
+.uitk-drawer-wrapper .uitk-drawer{font-size:.9411764705882353em;max-width:90%;z-index:1001;-ms-overflow-style:none;overflow:hidden}
+.uitk-drawer-wrapper .uitk-drawer .shopping-cart-close{width:2em;height:2em;display:block;margin:0;padding:0;position:absolute;right:.3529rem;top:.3529rem}
+.uitk-drawer-wrapper .uitk-drawer .shopping-cart-close svg{display:block;width:100%;height:100%}
+.uitk-drawer-wrapper .uitk-drawer .shopping-cart-close::before{display:none;position:static;width:auto;height:auto}
+.uitk-drawer-wrapper .uitk-drawer .shopping-cart-content{background-color:transparent;border:0;height:100%;padding:0;width:100%;margin-top:0}
+.cartIframeLoader{position:absolute;top:50%;width:100%;text-align:center}
+.cartIframeLoader .loader{margin-right:.5rem}
+.cartIframeLoader .loadingText{padding-top:.5rem}
+svg.cart-icon{height:1.2rem;width:1.5rem;vertical-align:sub}
+svg.cart-icon use.cart-icon{fill:#00355f}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row{padding-top:.29411765em;padding-bottom:.29411765em}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row{line-height:1.2352941176470589}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row::before{display:none;position:static;width:auto;height:auto}
+#headerCartButton{position:relative;float:right;padding-right:.52941176em;padding-left:.52941176em;margin-bottom:.11764706em;font-size:.8235294117647058em;color:#0063bb;font-weight:500;cursor:pointer}
+#headerCartButton .view-shopping-cart-icon{position:relative;top:.17647059em}
+@media only screen and (min-width:45.375em){.uitk-drawer-wrapper .uitk-drawer{max-width:39.375em}
+}
+@media only screen and (min-width:30.75em) and (max-width:45.3125em){.uitk-drawer-wrapper .uitk-drawer{max-width:85%}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row{padding:0 .35294118em 0}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row{line-height:1.2352941176470589}
+#headerCartButton{padding:.70588235em .88235294em .70588235em .88235294em}
+}
+@media only screen and (max-width:30.6875em){.view-cart-text{display:none}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row{padding:0 .35294118em 0}
+#headerCartPlayback.pattern-playback .playback-summary.cols-row{line-height:1.2352941176470589}
+#headerCartButton{padding:.70588235em .88235294em .70588235em .88235294em}
+}
+.exp14499-0{display:block}
+.exp14499-1{display:block}
+.qualifiedForExp24526 .fareFamilyList.segmented-list{margin-bottom:0}
+.qualifiedForExp24526 .fareFamilyList.segmented-list>.segment.no-target:not(header){padding-top:0;padding-right:0;padding-left:0}
+.qualifiedForExp24526 .fareFamilyList .segmentBackground{min-height:0}
+.qualifiedForExp24526 .fareFamilyList .hitArea{float:left;width:100%;padding:.88235294em .58823529em 0 .70588235em;cursor:pointer}
+.qualifiedForExp24526 .fareFamilyList .fareHeader{margin-left:.70588235em;width:70%}
+.qualifiedForExp24526 .fareFamilyList .toggle-details{margin-left:3.23529412em}
+.qualifiedForExp24526 .fareFamilyList .toggle-pane{margin-left:2.47058824em}
+.qualifiedForExp24526 .fareFamilyList .toggle-trigger{padding:.17647059em 2.35294118em .88235294em 2.05882353em;margin-left:-2.35294118em}
+.qualifiedForExp24526 .fareFamilyList .toggle-pane.open{margin-bottom:0}
+.qualifiedForExp24526 .fareFamilyList .toggle-inner{margin-top:1.17647059em}
+.qualifiedForExp24526 .fareFamilyList .featuredServices{margin-left:2.35294118em;margin-bottom:.88235294em;float:left}
+.qualifiedForExp24526 .fareFamilyList .farePrice{top:.58823529em}
+.qualifiedForExp24526 .fareFamilyList .check{float:left;margin:0;margin-left:.11764706em;width:1.17647059em;height:1.17647059em}
+.qualifiedForExp24526 .fareFamilyList .check input{width:1.47058824em;height:1.47058824em}
+.qualifiedForExp24526 .fareFamilyList .check .inline-label{display:none}
+.qualifiedForExp24526 .carCrossSellContainer .flex-card,.qualifiedForExp24526 .carCrossSellContainer .flex-content{flex-direction:column}
+.qualifiedForExp24526 .carCrossSellContainer .flex-figure.carImg{width:100px}
+.qualifiedForExp24526 .carCrossSellContainer .image.aspect-ratio1-1{padding-bottom:60%}
+.qualifiedForExp24526 .carCrossSellContainer .flex-theme-light .flex-area-secondary{position:relative;display:flex;flex-direction:column;margin-top:.58823529em}
+.qualifiedForExp24526 .carCrossSellContainer .carTotal,.qualifiedForExp24526 .carCrossSellContainer .bookLater{margin-right:8.82352941em}
+.qualifiedForExp24526 .carCrossSellContainer .bookLater{order:1;margin-top:0}
+.qualifiedForExp24526 .carCrossSellContainer .carTotal{order:0}
+.qualifiedForExp24526 .carCrossSellContainer .btn.addToTripButton{position:absolute;bottom:0;right:0}
+.qualifiedForExp24526 .carCrossSellContainer .viewMoreButton{padding:1.17647059em .58823529em 1.17647059em 0}
+.qualifiedForExp24526 .carCrossSellContainer,.qualifiedForExp24526 .fareFamilyContainer.bookingContainer ~ .bookingContainer{display:block}
+.qualifiedForExp24526 .importantInfoContainer{-webkit-box-ordinal-group:5;-moz-box-ordinal-group:5;-ms-flex-order:5;-webkit-order:5;order:5}
+.qualifiedForExp24526 .dynamicSocialProof,.qualifiedForExp24526 .freeCancellation{display:none}
+.qualifiedForExp24526.exp24526-2 .fareFamilyList article:nth-child(n+4){display:none}
+.qualifiedForExp24526.exp24526-2 .fareFamilyList.expanded article:nth-child(n+4){display:block}
+.qualifiedForExp24526.exp24526-2 #show-all-fares{padding:0;text-align:center}
+.qualifiedForExp24526.exp24526-2 #show-all-fares a{display:inline-block;padding:.88235294em;width:100%;font-size:.8823529411764706em}
+.qualifiedForExp24526.exp24526-2 #show-all-fares a span{top:.05882353em;margin-left:.11764706em}
+.qualifiedForExp24526.exp24526-2 #show-all-fares a.open span{top:.17647059em}
+@media only screen and (min-width:492px){.qualifiedForExp24526 .carCrossSellContainer .flex-card,.qualifiedForExp24526 .carCrossSellContainer .flex-content{flex-direction:inherit}
+.qualifiedForExp24526 .carCrossSellContainer .flex-figure.carImg{width:70px}
+.qualifiedForExp24526 .carCrossSellContainer .image.aspect-ratio1-1{padding-bottom:100%}
+.qualifiedForExp24526 .carCrossSellContainer .flex-theme-light .flex-area-secondary{position:inherit;display:block;margin-top:8px}
+.qualifiedForExp24526 .carCrossSellContainer .carTotal,.qualifiedForExp24526 .carCrossSellContainer .bookLater{margin-right:inherit}
+.qualifiedForExp24526 .carCrossSellContainer .bookLater{margin-top:inherit}
+.qualifiedForExp24526 .carCrossSellContainer .btn.addToTripButton{position:inherit}
+.qualifiedForExp24526 .dynamicSocialProof,.qualifiedForExp24526 .freeCancellation{display:block}
+}
+@media only screen and (min-width:780px){.qualifiedForExp24526 .fareFamilyList .farePrice{top:inherit}
+.qualifiedForExp24526 .fareFamilyList .fareHeader{width:15%}
+.qualifiedForExp24526 .fareFamilyList .toggle-details{margin-left:3.82352941em}
+.qualifiedForExp24526 .fareFamilyList .toggle-inner{margin-top:0}
+.qualifiedForExp24526 .fareFamilyList .featuredServices{margin-left:1.58823529em}
+}
+@media only screen and (min-width:960px){.qualifiedForExp24526 .dynamicSocialProof{display:none}
+}
+.qualifiedForExp25503 .flightSummary{background-color:inherit;border-bottom:0}
+.qualifiedForExp25503 .flightSummary .details{background-color:#fff;margin-bottom:0;-moz-box-shadow:0 1px 0 0 #c7c7c7;-webkit-box-shadow:0 1px 0 0 #c7c7c7;box-shadow:0 1px 0 0 #c7c7c7;-webkit-border-radius:.17647059em;-moz-border-radius:.17647059em;-o-border-radius:.17647059em;border-radius:.17647059em}
+.qualifiedForExp25503 .flightSummary .details+.details{margin-top:.70588235em}
+.qualifiedForExp25503 .flightSummary .details .flex-area-primary,.qualifiedForExp25503 .flightSummary .details .flex-content{padding:0;border:0}
+.qualifiedForExp25503 .flightSummary .details .flightDetailsContainer,.qualifiedForExp25503 .flightSummary .details .dateInfo{padding:.70588235em}
+.qualifiedForExp25503 .flightSummary .details .dateInfo{-moz-box-shadow:0 1px 0 0 #ededed;-webkit-box-shadow:0 1px 0 0 #ededed;box-shadow:0 1px 0 0 #ededed}
+.qualifiedForExp25503 .flightSummary .details .layover{border-bottom:1px #c7c7c7 solid;border-top:1px #c7c7c7 solid;padding-bottom:1.05882353em;padding-top:1.05882353em;margin:0}
+.qualifiedForExp25503 .flightSummary .details .time{font-weight:500}
+.qualifiedForExp25503 .flightSummary .details .plusOne{color:#d60000;vertical-align:middle}
+.qualifiedForExp25503 .flightSummary .details .durationStops{padding:0}
+.qualifiedForExp25503 .flightSummary .airlineLogo{width:1em;height:1em;vertical-align:text-top}
+.qualifiedForExp25503 .flightSummary .airlineLogo.desktopLogo{display:none;vertical-align:text-top;width:1.23529412em;height:1.23529412em}
+.qualifiedForExp25503 .flightSummary .airlineName{margin-left:.35294118em;color:#616161}
+.qualifiedForExp25503 .flightSummary .flightSummary-timeDuration{display:inline-block}
+.qualifiedForExp25503 .airplaneDepartureIcon{float:left;width:1.23529412em;height:1.23529412em;margin-right:.70588235em;background-size:21px 21px;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h48v48H0V0z%22%2F%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22b%22%3E%0A%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23a%22%20overflow%3D%22visible%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5%2038h38v4H5zm39.14-18.73c-.43-1.6-2.07-2.55-3.67-2.12L29.84%2020%2016.04%207.13l-3.86%201.04%208.28%2014.35-9.94%202.66-3.93-3.09-2.9.78%203.64%206.31%201.53%202.65%203.21-.86%2010.63-2.85%208.69-2.33%2010.63-2.85c1.6-.43%202.55-2.07%202.12-3.67z%22%20clip-path%3D%22url%28%23b%29%22%2F%3E%0A%20%20%20%20%3Cpath%20clip-path%3D%22url%28%23b%29%22%20fill%3D%22none%22%20d%3D%22M0%200h48v48H0V0z%22%2F%3E%0A%3C%2Fsvg%3E%0A")}
+.qualifiedForExp25503 .airplaneDepartureFlipIcon{float:left;width:1.23529412em;height:1.23529412em;margin-right:.70588235em;-webkit-transform:scaleX(-1);transform:scaleX(-1);background-size:21px 21px;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h48v48H0V0z%22%2F%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22b%22%3E%0A%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23a%22%20overflow%3D%22visible%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5%2038h38v4H5zm39.14-18.73c-.43-1.6-2.07-2.55-3.67-2.12L29.84%2020%2016.04%207.13l-3.86%201.04%208.28%2014.35-9.94%202.66-3.93-3.09-2.9.78%203.64%206.31%201.53%202.65%203.21-.86%2010.63-2.85%208.69-2.33%2010.63-2.85c1.6-.43%202.55-2.07%202.12-3.67z%22%20clip-path%3D%22url%28%23b%29%22%2F%3E%0A%20%20%20%20%3Cpath%20clip-path%3D%22url%28%23b%29%22%20fill%3D%22none%22%20d%3D%22M0%200h48v48H0V0z%22%2F%3E%0A%3C%2Fsvg%3E%0A")}
+.qualifiedForExp25503 .dateDepartureArrival{font-weight:700}
+.qualifiedForExp25503 .bargainFareDate .dateDepartureArrival{font-weight:normal}
+.qualifiedForExp25503 .flightSpecifics{color:#616161}
+.qualifiedForExp25503 .flightSpecifics:last-child{margin-bottom:0}
+.qualifiedForExp25503 .overnightText{color:#d60000}
+.qualifiedForExp25503 .basicEconomy{float:left;width:100%;margin:-0.92307692em 0 .46153846em 0}
+.qualifiedForExp25503 .basicEconomy .header{margin:.92307692em 0 .46153846em 0;font-weight:700;color:#757575}
+.qualifiedForExp25503 #bagFeeList li{padding:0}
+.qualifiedForExp25503 .flightDetailsToggle{padding-bottom:0}
+.qualifiedForExp25503 .flightDetailsToggle+.toggle-pane.open{border-top:0}
+.qualifiedForExp25503 .toggle-inner .flightSummary-timeDuration{padding-top:.70588235em}
+.qualifiedForExp25503 .toggle-inner .durationAirlineContainer div{display:inline-block;margin-right:1.64705882em;float:none}
+.qualifiedForExp25503 .timetype-300{font-weight:bold}
+.qualifiedForExp25503 .durationTopLabel{margin-left:3.11764706em}
+.qualifiedForExp25503 .durationTimeBottom{display:none}
+.qualifiedForExp25503 .carrierName{display:inherit}
+.qualifiedForExp25503 .seatText{display:inline}
+.qualifiedForExp25503 .seatMapPreviewText{display:inline}
+.qualifiedForExp25503 .trainService{margin-bottom:.70588235em;color:#d60000}
+.qualifiedForExp25503 .changeFlights{font-weight:normal;margin:.70588235em 0 1.41176471em 0}
+.qualifiedForExp25503 .changeFlights>a:first-child{font-size:.7647058823529411em}
+.qualifiedForExp25503 .differentAirportMessages{margin-top:.70588235em}
+.qualifiedForExp25503 .differentAirportMessages:empty{margin:0}
+.qualifiedForExp25503 .differentAirportMessages .differentAirport{margin-bottom:0}
+.qualifiedForExp25503 .differentAirportMessages .differentLegAirport{margin-bottom:.70588235em}
+.qualifiedForExp25503 .bagFeeInfo div::before,.qualifiedForExp25503 .bargainFareDate span+span::before,.qualifiedForExp25503 .cabinClass span+span::before,.qualifiedForExp25503 .ebfMessagesContainer span+span::before{content:'\00A0\00B7\00A0'}
+.qualifiedForExp25503 .bagFeeInfoHeader .icon-popup{margin-right:-0.23529412em;margin-left:-0.23529412em}
+.qualifiedForExp25503 .mixedCabinClass{color:#d60000}
+.qualifiedForExp25503 .superlativeMessages{float:right;text-align:right}
+.qualifiedForExp25503 .flightMessage{float:none}
+.qualifiedForExp25503 .flightSummary-expandedDetails{margin:0}
+.qualifiedForExp25503 .bargainFareHeader{font-weight:500;color:#00355f;margin-top:0}
+.qualifiedForExp25503 .ebfDurationStops{display:inline-block;margin-left:1.41176471em}
+.qualifiedForExp25503 .ebfMessage{color:black}
+.qualifiedForExp25503 .ebfAirportInformationContainer{color:#757575}
+.qualifiedForExp25503 .bargainFare .ebfRoundTrip{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0}
+.qualifiedForExp25503 .bargainFare .ebfRoundTrip+.ebfRoundTrip{-webkit-border-radius:0 0 .17647059em .17647059em;-moz-border-radius:0 0 .17647059em .17647059em;-o-border-radius:0 0 .17647059em .17647059em;border-radius:0 0 .17647059em .17647059em;margin-top:.05882353em}
+@media only screen and (max-width:59.9375em){.qualifiedForExp25503 .seatText{display:none}
+.qualifiedForExp25503 .durationTopLabel{display:none}
+}
+@media only screen and (max-width:725px){.qualifiedForExp25503 .arrivalAirport{display:inherit}
+.qualifiedForExp25503 .durationTimeBottom{display:inline-block;color:#616161}
+.qualifiedForExp25503 .carrierName{display:inherit}
+.qualifiedForExp25503 .planeInfo span+span::before{content:''}
+.qualifiedForExp25503 .planeInfo span+span+span::before{content:'\00A0\00B7\00A0'}
+}
+@media only screen and (max-width:950px){.qualifiedForExp25503 .durationTimeBottom{display:inline-block;color:#616161}
+}
+@media only screen and (min-width:30.6875em){.qualifiedForExp25503 .flightSummary .airlineLogo{display:none}
+.qualifiedForExp25503 .flightSummary .airlineLogo.desktopLogo{display:inline-block;margin-right:.70588235em}
+.qualifiedForExp25503 .flightSummary .airlineName{margin-left:2.53846154em}
+.qualifiedForExp25503 .carrierName{display:inline-block}
+.qualifiedForExp25503 .planeInfo span+span::before{content:'\00A0\00B7\00A0'}
+.qualifiedForExp25503 .bargainFare .details+.details{border-left:1px solid #ededed}
+.qualifiedForExp25503 .bargainFare .ebfRoundTrip{-webkit-border-radius:.17647059em 0 0 .17647059em;-moz-border-radius:.17647059em 0 0 .17647059em;-o-border-radius:.17647059em 0 0 .17647059em;border-radius:.17647059em 0 0 .17647059em}
+.qualifiedForExp25503 .bargainFare .ebfRoundTrip+.ebfRoundTrip{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0;-webkit-border-radius:0 .17647059em .17647059em 0;-moz-border-radius:0 .17647059em .17647059em 0;-o-border-radius:0 .17647059em .17647059em 0;border-radius:0 .17647059em .17647059em 0;margin-top:0}
+}
+.qualifiedForExp25785V1 .rewardImage{padding:.82352941em 0 0 1.76470588em}
+.qualifiedForExp25785V1 .rewardContent{padding:1.05882353em .70588235em .70588235em .35294118em;width:80%}
+.qualifiedForExp25785V1 .content{color:#8e0099}
+.qualifiedForExp25785V1 .flightSummaryDiv{margin-bottom:.41176471em}
+@media only screen and (max-width:59.9375em){.qualifiedForExp25785V1 .rewardImage{padding:.70588235em 0 .70588235em 1.05882353em}
+.qualifiedForExp25785V1 .rewardContent{padding:1.05882353em .70588235em .70588235em .35294118em}
+}
+@media only screen and (max-width:30.6875em){.qualifiedForExp25785V1 .rewardImage{padding:.70588235em 0 .70588235em 1.05882353em;width:10%}
+.qualifiedForExp25785V1 .rewardContent{padding:1.05882353em .70588235em .70588235em .35294118em;width:90%}
+}
+.qualifiedForExp25785V2 .rewardImageTrip{padding:.47058824em 0 .70588235em 1.17647059em}
+.qualifiedForExp25785V2 .rewardContentTrip{padding:.70588235em 0 0 .58823529em;width:88.4%}
+.qualifiedForExp25785V2 .content{color:#8e0099}
+.qualifiedForExp25785V2 .toggleReward{background-color:#fff;margin:0 0 .35294118em 0;clear:both}
+@media only screen and (max-width:59.9375em){.qualifiedForExp25785V2 .totalContainer{float:inherit}
+.qualifiedForExp25785V2 .hotel-coupon-main{margin-bottom:0}
+.qualifiedForExp25785V2 .toggleReward{background-color:#fff}
+.qualifiedForExp25785V2 .rewardImageTrip{padding:.47058824em 0 .70588235em 1.76470588em}
+.qualifiedForExp25785V2 .rewardContentTrip{padding:.70588235em 0 .35294118em .58823529em;width:85%}
+}
