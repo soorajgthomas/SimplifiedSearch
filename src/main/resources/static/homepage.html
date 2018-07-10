@@ -4191,9 +4191,9 @@ define('typeahead/core/context', function() {
                 showResults('lowCost');
             });
         });
-        /*$("#flight-departing-single-hp-flight").on('change', function () {
-            showResults('lowCost');
-        });*/
+        $(".results-list").click(function() {
+            window.open('http://wwwexpediacom.sandbox.dev.sb.karmalab.net/Flight-Information?continuationId=4dd0fb6b-d648-43da-82a7-859156aee6c4&rfrr=&superlativeMessages[0]=NA&udpDisplayMode=regular', '_blank');
+        });
     });
     function showResults(filter) {
         $(".quick-results").show();
@@ -6574,7 +6574,7 @@ define('typeahead/core/context', function() {
                         <div style="width: 50px; margin: 0 auto;"><span class=" loader-primary loader-light loader loader-animated loading" aria-hidden="true" title="Loading..." style="display: none; margin: 0 auto;"></span></div>
                         <ul id="flightModuleListLowCost" class="segmented-list results-list price-sort" style="display: none;">
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">10:29am</span> - <span data-test-id="arrival-time">1:42pm</span>
@@ -6599,7 +6599,7 @@ define('typeahead/core/context', function() {
                                 </a>
                             </li>
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">9:39pm</span> - <span data-test-id="arrival-time">1:09am</span>
@@ -6624,7 +6624,7 @@ define('typeahead/core/context', function() {
                                 </a>
                             </li>
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">7:30am</span> - <span data-test-id="arrival-time">10:50am</span>
@@ -6649,7 +6649,7 @@ define('typeahead/core/context', function() {
                                 </a>
                             </li>
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">6:07am </span> - <span data-test-id="arrival-time">9:08am</span>
@@ -6676,7 +6676,7 @@ define('typeahead/core/context', function() {
                         </ul>
                         <ul id="flightModuleListLowDuration" class="segmented-list results-list price-sort" style="display: none;">
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">1:50pm</span> - <span data-test-id="arrival-time">4:44pm</span>
@@ -6701,7 +6701,7 @@ define('typeahead/core/context', function() {
                                 </a>
                             </li>
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">7:39am</span> - <span data-test-id="arrival-time">10:33am</span>
@@ -6726,7 +6726,7 @@ define('typeahead/core/context', function() {
                                 </a>
                             </li>
                             <li  class="flight-module offer-listing text-center">
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">6:07am</span> - <span data-test-id="arrival-time">9:01am</span>
@@ -6755,7 +6755,7 @@ define('typeahead/core/context', function() {
                         <ul id="flightModuleListPromotions" class="segmented-list results-list price-sort" style="display: none;">
                             <li  class="flight-module offer-listing text-center">
                                 <p class="promotion-tag">+ $25 hotel coupon</p>
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">7:05am</span> - <span data-test-id="arrival-time">10:11am</span>
@@ -6781,7 +6781,7 @@ define('typeahead/core/context', function() {
                             </li>
                             <li  class="flight-module offer-listing text-center">
                                 <p class="promotion-tag">+ $25 hotel coupon</p>
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">6:07am</span> - <span data-test-id="arrival-time">9:01am</span>
@@ -6807,7 +6807,7 @@ define('typeahead/core/context', function() {
                             </li>
                             <li  class="flight-module offer-listing text-center">
                                 <p class="promotion-tag">+ $25 hotel coupon</p>
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">1:50pm</span> - <span data-test-id="arrival-time">4:44pm</span>
@@ -6833,7 +6833,7 @@ define('typeahead/core/context', function() {
                             </li>
                             <li  class="flight-module offer-listing text-center">
                                 <p class="promotion-tag">+ $25 hotel coupon</p>
-                                <a href="">
+                                <a>
                                     <div class="primary-content no-wrap custom-primary-padding">
                             <span class="medium-bold">
                                 <span data-test-id="departure-time">10:29am</span> - <span data-test-id="arrival-time">1:42pm</span>
