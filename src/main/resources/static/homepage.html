@@ -2333,7 +2333,7 @@ define('typeahead/core/context', function() {
         <div class="tabs-wrapper wizard-tabs-slider">
         <ul class="tabs cf col">
           <li class="tab " role="presentation" style="display: list-item;">
-              <button class="" data-lob="flight" data-section-id="#section-flight-tab-hp" id="tab-flight-tab-hp" type="button">
+              <button class="on" data-lob="flight" data-section-id="#section-flight-tab-hp" id="tab-flight-tab-hp" type="button" data-initial-tab="true">
                 <span class="icons-container">
                   <span class="uitk-icon uitk-icon-flights" data-control="uitk-icon" aria-hidden="true">
                       <svg class="uitk-icon-svg">
@@ -2365,7 +2365,7 @@ define('typeahead/core/context', function() {
               </button>
             </li>
           <li class="tab " role="presentation" style="display: list-item;">
-              <button class="on" data-lob="package" data-section-id="#section-package-tab-hp" id="tab-package-tab-hp" type="button" data-initial-tab="true">
+              <button class="" data-lob="package" data-section-id="#section-package-tab-hp" id="tab-package-tab-hp" type="button">
                 <span class="icons-container">
                   <span class="uitk-icon uitk-icon-flights" data-control="uitk-icon" aria-hidden="true">
                       <svg class="uitk-icon-svg">
@@ -2468,7 +2468,7 @@ define('typeahead/core/context', function() {
           </ul>
         </div>
       <div class="tabs-container col">
-        <section class="tab-pane  cf gcw-section-flights-tab" id="section-flight-tab-hp">
+        <section class="tab-pane on cf gcw-section-flights-tab" id="section-flight-tab-hp">
             <form id="gcw-flights-form-hp-flight" class="gcw-form flights flexible-shopping-form gcw-traveler-selector no-gcw-prepopulate-flying-from no-gcw-grey-out-irrelevant-dates no-gcw-oneway-packages gcw-lessThanNTravelers-travelerSelector gcw-unattendedInfantInLap-travelerSelector gcw-childAgesAllProvided-travelerSelector gcw-allFlightsComplete gcw-allOriginsAreDifferentFromDestinations gcw-dynamic-leg-fields ess-passthrough-disabled" data-gcw-key="hp-flight" data-gcw-max-travelers="6" action="https://www.expedia.com/Flights-Search" method="GET" data-gcw-processing-function="flights" data-gcw-datapreloading-function="flights" data-gcw-controller="flights" data-locale="en_US" data-siteid="1" data-location-search-type="uta" data-lob-form="flight" data-gcw-current-package-type="flight">
   <div class="mobile-hero-banner-title">
     Search Flights</div>
@@ -4027,7 +4027,190 @@ define('typeahead/core/context', function() {
     <div class="col package-val-prop gcw-default-visible-msg member-pricing-wizard-message" id="default-msg-tooltip-hp-hotel" style="display:none">
     <p class="default-msg">You'll get an <strong>extra 10% or more off</strong> select hotels with Member Pricing</p>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .quick-results {
+            width: 100%;
+            border-top: 1px solid #757575;
+        }
+        .image-container {
+            width: 13px;
+            height: 13px;
+            display: inline-block;
+        }
+        .image-container img {
+            width: 100%;
+        }
+        .flight-module.offer-listing {
+            width: 23%;
+            float: left;
+            margin: 0 10px 10px;
+            border: 0 solid #e0e0e0;
+            border-width: 0 0 1px;
+            border-radius: 3px;
+            padding: .47058824rem .70588235rem;
+            background: #fff;
+        }
+        .flight-module.offer-listing a {
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+        .medium-bold {
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .primary-content {
+            margin: 5px 0;
+        }
+        .secondary-content {
+            font-size: 13px;
+            color: #757575;
+        }
+        .full-bold {
+            font-weight: bold;
+        }
+        .results-list {
+            overflow: auto;
+            margin-bottom: 0;
+        }
+        .flight-listing-container {
+            padding: 0;
+            background-color: #ededed;
+            margin: 10px 0;
+            border: 1px solid #757575;
+            border-radius: 3px;
+            background-color: transparent;
+        }
+        .promotion-tag {
+            font-size: 12px;
+            font-weight: 500;
+            background: #ffc700;
+            text-align: center;
+            width: 100%;
+            left: 0;
+            top: 0;
+            padding: 2px 0;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript">
+    require(['jquery'], function ($) {
+        $(document).ready(function () {
+            $('input[type=radio][name=result-type]').change(function () {
+                $("#showResults").attr('onclick', 'showResults("' + this.value + '")');
+            });
+            $(".datepicker-dropdown").click(function() {
+                showResults('lowCost');
+            });
+        });
+        $(".results-list").click(function() {
+            window.open('http://wwwexpediacom.sandbox.dev.sb.karmalab.net/Flight-Information?continuationId=4dd0fb6b-d648-43da-82a7-859156aee6c4&rfrr=&superlativeMessages[0]=NA&udpDisplayMode=regular', '_blank');
+        });
+    });
+    function showResults(filter) {
+        $(".quick-results").show();
+        $(".loader-primary").show();
+        $(".loader-primary").delay(500).hide(0);
+        $(".results-list").hide();
+        if (filter == 'lowCost') {
+            $("#flightModuleListLowCost").delay(500).fadeIn(500);
+        } else if (filter == 'lowDuration') {
+            $("#flightModuleListLowDuration").delay(500).fadeIn(500);
+        } else if (filter == 'promotions') {
+            $("#flightModuleListPromotions").delay(500).fadeIn(500);
+        }
+    };
+
+
+
     require(['gc/pageModel', 'jquery', 'dctk/dctk'], function (pageModel, $, dctk) {
         var user = pageModel.user;
         var site = pageModel.site;
@@ -4064,7 +4247,7 @@ define('typeahead/core/context', function() {
 </div>
 </form>
 </section>
-        <section class="tab-pane on cf gcw-section-packages-tab" id="section-package-tab-hp">
+        <section class="tab-pane cf gcw-section-packages-tab" id="section-package-tab-hp">
             <form id="gcw-packages-form-hp-package" class="gcw-form gcw-childAgesAllProvided-travelerSelector gcw-lessThanNTravelers-travelerSelector gcw-isPartialDateWithinRange gcw-isPartialCarDateWithinRange flexible-shopping-form gcw-traveler-selector ess-passthrough-disabled" data-gcw-key="hp-package" data-gcw-max-travelers="6" data-gcw-processing-function="packages" data-gcw-controller="packages" action="https://www.expedia.com/pubspec/scripts/eap.asp" method="GET" data-locale="en_US" data-siteid="1" data-location-search-type="uta" data-lob-form="package" data-gcw-current-package-type="flight-hotel">
   <div class="mobile-hero-banner-title">
         Search Vacation Packages</div>
@@ -6336,6 +6519,358 @@ define('typeahead/core/context', function() {
 </section>
         </div>
     </div>
+
+
+
+
+
+
+
+                <section class="quick-results" role="main" style="display: none;" id="bCol">
+
+                    <fieldset class="sub-nav-select">
+                        <div class="sub-nav-select-container">
+                            <div class="col">
+                                <input onclick="showResults('lowCost')" id="low-cost" value="lowCost" type="radio" name="result-type" checked="" autocomplete="off">
+                                <label class="check col" for="low-cost">
+                                    <span class="inline-label">Low fare</span>
+                                </label>
+                            </div>
+                            <div class="col">
+                                <input onclick="showResults('lowDuration')" id="low-duration" value="lowDuration" type="radio" name="result-type" autocomplete="off">
+                                <label class="check col" for="low-duration">
+                                    <span class="inline-label">Shortest duration</span>
+                                </label>
+                            </div>
+                            <div class="col">
+                                <input onclick="showResults('promotions')" id="promotions" value="promotions" type="radio" name="result-type" autocomplete="off">
+                                <label class="check col" for="promotions">
+                                    <span class="inline-label">Promotions</span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <section class="gcw-section-flights-tab wizard-tabs" style="float: right;">
+                        <div class="cols-nested ab25184-attach-lob" data-gcw-field-available-for-sub-nav-option="roundtrip">
+                            <label class="check col gcw-flights-add-hotel " for="add-hotel">
+                                <input id="add-hotel" type="checkbox" onclick="bundleThis('addHotel')">
+                                <span class="inline-label">
+                                  <span class="icon icon-hotels" aria-hidden="true"></span>
+                                    &nbsp;Add a hotel
+                                </span>
+                            </label>
+                            <label class="check col gcw-flights-add-car" for="add-car">
+                                <input id="add-car" type="checkbox" onclick="bundleThis('addCar')">
+                                <span class="inline-label">
+                                  <span class="icon icon-cars" aria-hidden="true"></span>
+                                    &nbsp;Add a car
+                                </span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <div id="flight-listing-container" class="flight-listing-container">
+                        <div style="width: 50px; margin: 0 auto;"><span class=" loader-primary loader-light loader loader-animated loading" aria-hidden="true" title="Loading..." style="display: none; margin: 0 auto;"></span></div>
+                        <ul id="flightModuleListLowCost" class="segmented-list results-list price-sort" style="display: none;">
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">10:29am</span> - <span data-test-id="arrival-time">1:42pm</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/DL_sq.svg" alt="Delta logo" class="tile-media"></span>
+                                        <span class="secondary-content">Delta</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">6h 13m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$246</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">9:39pm</span> - <span data-test-id="arrival-time">1:09am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/DL_sq.svg" alt="Delta logo" class="tile-media"></span>
+                                        <span class="secondary-content">Delta</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">6h 30m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$246</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">7:30am</span> - <span data-test-id="arrival-time">10:50am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/AA_sq.svg" alt="American Airlines logo" class="tile-media"></span>
+                                        <span class="secondary-content">American Airlines</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">6h 20m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$246</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">6:07am </span> - <span data-test-id="arrival-time">9:08am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/AS_sq.svg" alt="Alaska Airlines logo" class="tile-media"></span>
+                                        <span class="secondary-content">Alaska Airlines</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">6h 1m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            EWR - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$246</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="flightModuleListLowDuration" class="segmented-list results-list price-sort" style="display: none;">
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">1:50pm</span> - <span data-test-id="arrival-time">4:44pm</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/UA_sq.svg" alt="United logo" class="tile-media"></span>
+                                        <span class="secondary-content">United</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">5h 54m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            EWR - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$322</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">7:39am</span> - <span data-test-id="arrival-time">10:33am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/UA_sq.svg" alt="United logo" class="tile-media"></span>
+                                        <span class="secondary-content">United</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">5h 54m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            EWR - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$322</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">6:07am</span> - <span data-test-id="arrival-time">9:01am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/DL_sq.svg" alt="Delta logo" class="tile-media"></span>
+                                        <span class="secondary-content">Delta</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">5h 54m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$487</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <ul id="flightModuleListPromotions" class="segmented-list results-list price-sort" style="display: none;">
+                            <li  class="flight-module offer-listing text-center">
+                                <p class="promotion-tag">+ $25 hotel coupon</p>
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">7:05am</span> - <span data-test-id="arrival-time">10:11am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/DL_sq.svg" alt="Delta logo" class="tile-media"></span>
+                                        <span class="secondary-content">Delta</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">6h 6m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$251</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <p class="promotion-tag">+ $25 hotel coupon</p>
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">6:07am</span> - <span data-test-id="arrival-time">9:01am</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/DL_sq.svg" alt="Delta logo" class="tile-media"></span>
+                                        <span class="secondary-content">Delta</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">5h 54m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$487</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <p class="promotion-tag">+ $25 hotel coupon</p>
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">1:50pm</span> - <span data-test-id="arrival-time">4:44pm</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/UA_sq.svg" alt="United logo" class="tile-media"></span>
+                                        <span class="secondary-content">United</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">5h 54m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            EWR - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$322</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  class="flight-module offer-listing text-center">
+                                <p class="promotion-tag">+ $25 hotel coupon</p>
+                                <a>
+                                    <div class="primary-content no-wrap custom-primary-padding">
+                            <span class="medium-bold">
+                                <span data-test-id="departure-time">10:29am</span> - <span data-test-id="arrival-time">1:42pm</span>
+                            </span>
+                                    </div>
+                                    <div>
+                                        <span class="image-container"><img src="./NYC to SEA Flights _ Expedia_files/DL_sq.svg" alt="Delta logo" class="tile-media"></span>
+                                        <span class="secondary-content">Delta</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="secondary-content">
+                                            <span class="duration-emphasis">6h 13m </span>
+                                            <span class="number-stops">(Nonstop) </span>
+                                        </div>
+                                        <div class="secondary-content no-wrap">
+                                            JFK - SEA
+                                        </div>
+                                    </div>
+                                    <div class="primary-content">
+                                        <span class="full-bold no-wrap">$251</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
   <script>
       if (ewe_performance) {
         window.requestAnimationFrame(function() {
